@@ -34,6 +34,10 @@ module.exports = {
             jQuery: 'jquery',
             'window.$': 'jquery',
             'window.jQuery': 'jquery'
+        }),
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__: true,
+            __VUE_PROD_DEVTOOLS__: false,
         })
     ],
     optimization: {
@@ -75,5 +79,11 @@ module.exports = {
                 }
             }
         ]
+    },
+    externals: {
+        jquery: 'jQuery'
+    },
+    performance: {
+        hints: false
     }
 };
