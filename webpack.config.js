@@ -52,6 +52,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.pug$/,
+                loader: 'pug-plain-loader'
+            },
+            {
                 test: /\.vue$/,
                 use: "vue-loader"
             },
